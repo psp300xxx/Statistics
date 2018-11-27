@@ -13,9 +13,32 @@ extension  BarChartView {
     
 }
 
-class BarChartsViewController: UIViewController {
+class BarChartsViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    var keysArray : [String] {
+        return dictionary.keys.map({return $0})
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dictionary.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+        return NSAttributedString(string : keysArray[row])
+    }
+    
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    let dictionary : [String : RandomVariableGenerator] = ["Triangolar D" : TriangolarVariableGenerator(), "Negative Exp Generator" : NegativeExpGen() ]
+    
     
     var parallelGenerator : ParallelDistributionGenerator!
 
@@ -30,6 +53,8 @@ class BarChartsViewController: UIViewController {
         if let activity = activityIndicator {
             activity.isHidden = true
         }
+        pickerView.dataSource = self
+        pickerView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -49,7 +74,8 @@ class BarChartsViewController: UIViewController {
                 activity.isHidden = false
                 activity.startAnimating()
             }
-            let randomVariables : RandomVariableGenerator = NegativeExpGen()
+            let row = pickerView.selectedRow(inComponent: 0)
+            let randomVariables : RandomVariableGenerator = dictionary[keysArray[row]]!
             parallelGenerator = ParallelDistributionGenerator(randomGenerator: randomVariables)
             if let parallel = parallelGenerator {
                 parallel.generate(number: value) { (distributions) in
@@ -58,19 +84,19 @@ class BarChartsViewController: UIViewController {
                         activity.isHidden = true
                     }
                     sender.isEnabled = true
-                    var array : [(lambda : Int,average :  Double)] = []
+                    var array : [(lambda : Int,function :  () -> Double)] = []
                     for i in 0..<distributions.count {
-                        array.append((i, distributions[i].average()))
+                        array.append((i, distributions[i].average))
                     }
                     
                     self.barChartsView.clearValues()
                     self.barChartsView.clear()
                     var dataEntry : [BarChartDataEntry] = []
                     for i in array {
-                        let entry = BarChartDataEntry.init(x: Double(i.lambda), y: i.average)
+                        let entry = BarChartDataEntry.init(x: Double(i.lambda), y: i.function())
                         dataEntry.append(entry)
                     }
-                    let chartDataSet = BarChartDataSet(values: dataEntry, label: "negtive exp")
+                    let chartDataSet = BarChartDataSet(values: dataEntry, label: distributions[0].name)
                     let chartData = BarChartData()
                     chartData.addDataSet(chartDataSet)
                     self.barChartsView.data = chartData

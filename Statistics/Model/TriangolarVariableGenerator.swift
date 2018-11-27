@@ -25,6 +25,7 @@ public class TriangolarVariableGenerator : RandomVariableGenerator {
             let c = a + Double(arc4random_uniform(UInt32(Int(b-a))))
             let distribution = TriangolarDistribution(a: aBase*Double(arc4random_uniform(UInt32(i))), b: Double(bBase*Double(arc4random_uniform(UInt32(i)))), c: c)
             if let distribution = distribution {
+                distribution.name = "Triangolar Distribution"
                 result.append(distribution)
             }
         }

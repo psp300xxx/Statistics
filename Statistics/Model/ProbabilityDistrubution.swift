@@ -10,10 +10,14 @@ import Foundation
 
 public protocol ProbabilityDistribution {
     
+    var name : String? {get set}
+    
     func probabiltyAtTime(time : Double) -> Double
     
     func average() -> Double
     
     func variance() -> Double
+    
+
     
 }

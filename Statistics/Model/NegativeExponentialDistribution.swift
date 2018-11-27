@@ -11,6 +11,10 @@ import Foundation
 public class NegativeExponentialDistribution : ProbabilityDistribution {
     
     private let lambda : Double
+    public var LAMBDA : Double {
+        return lambda
+    }
+    public var name: String?
     
     public init(lambda : Double){
         self.lambda = lambda

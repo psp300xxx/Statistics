@@ -12,6 +12,7 @@ import Foundation
 public class TriangolarDistribution : ProbabilityDistribution {
     
     let a,b,c : Double
+    public var name : String? 
     
     public init(){
         a = 2

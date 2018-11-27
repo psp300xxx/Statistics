@@ -14,6 +14,18 @@
 		E3265F0B21A6E97300064F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3265F0921A6E97300064F48 /* LaunchScreen.storyboard */; };
 		E3265F1621A6E97300064F48 /* StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3265F1521A6E97300064F48 /* StatisticsTests.swift */; };
 		E3265F2121A6E97300064F48 /* StatisticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3265F2021A6E97300064F48 /* StatisticsUITests.swift */; };
+		E3265F3821A6E9C100064F48 /* Tests in Resources */ = {isa = PBXBuildFile; fileRef = E3265F3721A6E9C100064F48 /* Tests */; };
+		E3265F3921A6EAC500064F48 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3265F3421A6E9AE00064F48 /* Charts.framework */; };
+		E3265F3A21A6EAC500064F48 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3265F3421A6E9AE00064F48 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3265F3F21A6EB9600064F48 /* BarChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3265F3E21A6EB9600064F48 /* BarChartsViewController.swift */; };
+		E33CB9BE21AC281E008A00AC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9BD21AC281E008A00AC /* DoubleExtension.swift */; };
+		E33CB9C521AC8F32008A00AC /* ProbabilityDistrubution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9C421AC8F32008A00AC /* ProbabilityDistrubution.swift */; };
+		E33CB9C721AC8F9B008A00AC /* NegativeExponentialDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9C621AC8F9B008A00AC /* NegativeExponentialDistribution.swift */; };
+		E33CB9C921AC9866008A00AC /* TriangolarDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9C821AC9866008A00AC /* TriangolarDistribution.swift */; };
+		E33CB9CB21AC9FC1008A00AC /* RandonVariableGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9CA21AC9FC1008A00AC /* RandonVariableGenerator.swift */; };
+		E33CB9CD21ACA053008A00AC /* NegativeExpGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33CB9CC21ACA053008A00AC /* NegativeExpGen.swift */; };
+		E353A39F21AD2EBD00A4A619 /* TriangolarVariableGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353A39E21AD2EBD00A4A619 /* TriangolarVariableGenerator.swift */; };
+		E353A3A221AD31F200A4A619 /* ParallelDistributionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353A3A121AD31F200A4A619 /* ParallelDistributionGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +43,42 @@
 			remoteGlobalIDString = E3265EFC21A6E97100064F48;
 			remoteInfo = Statistics;
 		};
+		E3265F3321A6E9AE00064F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		E3265F3521A6E9AE00064F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		E3265F3B21A6EAC500064F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3265F3D21A6EAC500064F48 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E3265F3A21A6EAC500064F48 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E3265EFD21A6E97100064F48 /* Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Statistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +94,17 @@
 		E3265F1C21A6E97300064F48 /* StatisticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatisticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3265F2021A6E97300064F48 /* StatisticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsUITests.swift; sourceTree = "<group>"; };
 		E3265F2221A6E97300064F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		E3265F3721A6E9C100064F48 /* Tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tests; sourceTree = "<group>"; };
+		E3265F3E21A6EB9600064F48 /* BarChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartsViewController.swift; sourceTree = "<group>"; };
+		E33CB9BD21AC281E008A00AC /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		E33CB9C421AC8F32008A00AC /* ProbabilityDistrubution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityDistrubution.swift; sourceTree = "<group>"; };
+		E33CB9C621AC8F9B008A00AC /* NegativeExponentialDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeExponentialDistribution.swift; sourceTree = "<group>"; };
+		E33CB9C821AC9866008A00AC /* TriangolarDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangolarDistribution.swift; sourceTree = "<group>"; };
+		E33CB9CA21AC9FC1008A00AC /* RandonVariableGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandonVariableGenerator.swift; sourceTree = "<group>"; };
+		E33CB9CC21ACA053008A00AC /* NegativeExpGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeExpGen.swift; sourceTree = "<group>"; };
+		E353A39E21AD2EBD00A4A619 /* TriangolarVariableGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangolarVariableGenerator.swift; sourceTree = "<group>"; };
+		E353A3A121AD31F200A4A619 /* ParallelDistributionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallelDistributionGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3265F3921A6EAC500064F48 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +140,10 @@
 				E3265F1421A6E97300064F48 /* StatisticsTests */,
 				E3265F1F21A6E97300064F48 /* StatisticsUITests */,
 				E3265EFE21A6E97100064F48 /* Products */,
+				E3265F3721A6E9C100064F48 /* Tests */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		E3265EFE21A6E97100064F48 /* Products */ = {
 			isa = PBXGroup;
@@ -97,12 +158,13 @@
 		E3265EFF21A6E97100064F48 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				E33CB9C221AC8F17008A00AC /* Model */,
 				E3265F0021A6E97100064F48 /* AppDelegate.swift */,
-				E3265F0221A6E97100064F48 /* ViewController.swift */,
-				E3265F0421A6E97100064F48 /* Main.storyboard */,
-				E3265F0721A6E97300064F48 /* Assets.xcassets */,
-				E3265F0921A6E97300064F48 /* LaunchScreen.storyboard */,
+				E33CB9BB21AC280B008A00AC /* Extensions */,
+				E33CB9BF21AC2D78008A00AC /* Controller */,
+				E33CB9C021AC2D89008A00AC /* View */,
 				E3265F0C21A6E97300064F48 /* Info.plist */,
+				E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -125,6 +187,56 @@
 			path = StatisticsUITests;
 			sourceTree = "<group>";
 		};
+		E3265F2F21A6E9AD00064F48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3265F3421A6E9AE00064F48 /* Charts.framework */,
+				E3265F3621A6E9AE00064F48 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E33CB9BB21AC280B008A00AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E33CB9BD21AC281E008A00AC /* DoubleExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E33CB9BF21AC2D78008A00AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3265F3E21A6EB9600064F48 /* BarChartsViewController.swift */,
+				E3265F0221A6E97100064F48 /* ViewController.swift */,
+				E353A3A121AD31F200A4A619 /* ParallelDistributionGenerator.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E33CB9C021AC2D89008A00AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3265F0721A6E97300064F48 /* Assets.xcassets */,
+				E3265F0921A6E97300064F48 /* LaunchScreen.storyboard */,
+				E3265F0421A6E97100064F48 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E33CB9C221AC8F17008A00AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E33CB9C421AC8F32008A00AC /* ProbabilityDistrubution.swift */,
+				E33CB9C621AC8F9B008A00AC /* NegativeExponentialDistribution.swift */,
+				E33CB9C821AC9866008A00AC /* TriangolarDistribution.swift */,
+				E33CB9CA21AC9FC1008A00AC /* RandonVariableGenerator.swift */,
+				E33CB9CC21ACA053008A00AC /* NegativeExpGen.swift */,
+				E353A39E21AD2EBD00A4A619 /* TriangolarVariableGenerator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +247,12 @@
 				E3265EF921A6E97100064F48 /* Sources */,
 				E3265EFA21A6E97100064F48 /* Frameworks */,
 				E3265EFB21A6E97100064F48 /* Resources */,
+				E3265F3D21A6EAC500064F48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3265F3C21A6EAC500064F48 /* PBXTargetDependency */,
 			);
 			name = Statistics;
 			productName = Statistics;
@@ -215,6 +329,12 @@
 			mainGroup = E3265EF421A6E97100064F48;
 			productRefGroup = E3265EFE21A6E97100064F48 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E3265F2F21A6E9AD00064F48 /* Products */;
+					ProjectRef = E3265F2E21A6E9AD00064F48 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E3265EFC21A6E97100064F48 /* Statistics */,
@@ -224,11 +344,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		E3265F3421A6E9AE00064F48 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = E3265F3321A6E9AE00064F48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E3265F3621A6E9AE00064F48 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = E3265F3521A6E9AE00064F48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		E3265EFB21A6E97100064F48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3265F3821A6E9C100064F48 /* Tests in Resources */,
 				E3265F0B21A6E97300064F48 /* LaunchScreen.storyboard in Resources */,
 				E3265F0821A6E97300064F48 /* Assets.xcassets in Resources */,
 				E3265F0621A6E97100064F48 /* Main.storyboard in Resources */,
@@ -256,8 +394,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E33CB9BE21AC281E008A00AC /* DoubleExtension.swift in Sources */,
+				E33CB9CD21ACA053008A00AC /* NegativeExpGen.swift in Sources */,
+				E353A39F21AD2EBD00A4A619 /* TriangolarVariableGenerator.swift in Sources */,
+				E353A3A221AD31F200A4A619 /* ParallelDistributionGenerator.swift in Sources */,
+				E33CB9C921AC9866008A00AC /* TriangolarDistribution.swift in Sources */,
 				E3265F0321A6E97100064F48 /* ViewController.swift in Sources */,
+				E33CB9C521AC8F32008A00AC /* ProbabilityDistrubution.swift in Sources */,
 				E3265F0121A6E97100064F48 /* AppDelegate.swift in Sources */,
+				E33CB9C721AC8F9B008A00AC /* NegativeExponentialDistribution.swift in Sources */,
+				E3265F3F21A6EB9600064F48 /* BarChartsViewController.swift in Sources */,
+				E33CB9CB21AC9FC1008A00AC /* RandonVariableGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = E3265EFC21A6E97100064F48 /* Statistics */;
 			targetProxy = E3265F1D21A6E97300064F48 /* PBXContainerItemProxy */;
+		};
+		E3265F3C21A6EAC500064F48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = E3265F3B21A6EAC500064F48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,8 +583,10 @@
 		E3265F2621A6E97300064F48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LWBBPW4V5;
 				INFOPLIST_FILE = Statistics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,8 +602,10 @@
 		E3265F2721A6E97300064F48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7LWBBPW4V5;
 				INFOPLIST_FILE = Statistics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
